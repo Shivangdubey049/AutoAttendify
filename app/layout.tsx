@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { AuthProvider } from "@/components/auth-context"
 import { Suspense } from "react"
+import { Chatbot } from "@/components/chatbot"
 
 export const metadata: Metadata = {
   title: "AutoAttendify — HackHawks",
@@ -25,6 +26,7 @@ export default function RootLayout({
           <AuthProvider>{children}</AuthProvider>
         </Suspense>
         <Analytics />
+        <Chatbot />
       </body>
     </html>
   )
